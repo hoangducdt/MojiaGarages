@@ -847,7 +847,7 @@ JobVeh = {
 	['mechanic'] = {
 		['mechanic'] = { --make sure the name is the same as the job garage name configured above(see line 646)
 			vehicle = {
-				[0] = { --recruit
+				['shared'] = { --recruit
 					['lgc19flatbed'] = {
 						name = 'Peterbilt 337',
 						livery = nil,
@@ -856,62 +856,46 @@ JobVeh = {
 					},
 					['isgtow'] = {
 						name = 'Towtruck T440',
+						livery = nil,
+						modType = nil,
+						modIndex = nil,
+					},
+				},
+				[0] = { --recruit
+					['spawnnamehere'] = {
+						name = 'LAbel Here',
 						livery = nil,
 						modType = nil,
 						modIndex = nil,
 					},
 				},
 				[1] = { --novice
-					['lgc19flatbed'] = {
-						name = 'Peterbilt 337',
-						livery = nil,
-						modType = nil,
-						modIndex = nil,
-					},
-					['isgtow'] = {
-						name = 'Towtruck T440',
+					['spawnnamehere'] = {
+						name = 'LAbel Here',
 						livery = nil,
 						modType = nil,
 						modIndex = nil,
 					},
 				},
 				[2] = { --experienced
-					['lgc19flatbed'] = {
-						name = 'Peterbilt 337',
-						livery = nil,
-						modType = nil,
-						modIndex = nil,
-					},
-					['isgtow'] = {
-						name = 'Towtruck T440',
+					['spawnnamehere'] = {
+						name = 'LAbel Here',
 						livery = nil,
 						modType = nil,
 						modIndex = nil,
 					},
 				},
 				[3] = { --advanced
-					['lgc19flatbed'] = {
-						name = 'Peterbilt 337',
-						livery = nil,
-						modType = nil,
-						modIndex = nil,
-					},
-					['isgtow'] = {
-						name = 'Towtruck T440',
+					['spawnnamehere'] = {
+						name = 'LAbel Here',
 						livery = nil,
 						modType = nil,
 						modIndex = nil,
 					},
 				},
 				[4] = { --manager
-					['lgc19flatbed'] = {
-						name = 'Peterbilt 337',
-						livery = nil,
-						modType = nil,
-						modIndex = nil,
-					},
-					['isgtow'] = {
-						name = 'Towtruck T440',
+					['spawnnamehere'] = {
+						name = 'LAbel Here',
 						livery = nil,
 						modType = nil,
 						modIndex = nil,
@@ -940,6 +924,14 @@ JobVeh = {
 	['police'] = {
 		['mspdgarage'] = { --make sure the name is the same as the job garage name configured above(see line 516)
 			vehicle = {
+				['shared'] = {
+					['police'] = {
+						name = 'Police Car 1',
+						livery = nil,
+						modType = nil,
+						modIndex = nil,
+					},
+				},
 				[0] = { --recruit
 					['police'] = {
 						name = 'Police Car 1',
@@ -1175,6 +1167,14 @@ JobVeh = {
 		},
 		['mspdheligarage'] = {
 			vehicle = {
+				['shared'] = { --recruit
+					['POLMAV'] = {
+						name = 'Police Helicopter',
+						livery = 0,
+						modType = 0,
+						modIndex = 48,
+					},
+				},
 				[0] = { --recruit
 					['POLMAV'] = {
 						name = 'Police Helicopter',
@@ -1226,6 +1226,14 @@ JobVeh = {
 	['ambulance'] = {
 		['hospital'] = { --make sure the name is the same as the job garage name configured above(see line: 597)
 			vehicle = {
+				['shared'] = { --recruit
+					['ambulance'] = {
+						name = 'Ambulance',
+						livery = nil,
+						modType = nil,
+						modIndex = nil,
+					},
+				},
 				[0] = { --recruit
 					['ambulance'] = {
 						name = 'Ambulance',

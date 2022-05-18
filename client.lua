@@ -1399,6 +1399,26 @@ RegisterNetEvent('MojiaGarages:client:openJobVehList', function() --Job Vehicles
 				event = 'qb-menu:closeMenu',
 			}
 		}
+		if JobVeh[PlayerData.job.name][currentgarage].vehicle['shared'] then
+			for k, v in pairs(JobVeh[PlayerData.job.name][currentgarage].vehicle[PlayerData.job.grade.level]) do
+				local plate = JobVeh[PlayerData.job.name][currentgarage].plate .. tostring(math.random(1000, 9999))
+				vehicleMenu[#vehicleMenu + 1] = {
+					header = v.name,
+					txt = Lang:t('info.vehicle_info', {plate = plate, fuel = 100, engine = 100, body = 100, tank = 100, dirt = 0}),
+					params = {
+						event = 'MojiaGarages:client:SpawnJobVeh',
+						args = {
+							model = k,
+							plate = plate,
+							livery = v.livery,
+							modType = v.modType,
+							modIndex = v.modIndex,
+						}
+					}
+				}
+			end
+		end
+		if JobVeh[PlayerData.job.name][currentgarage].vehicle[PlayerData.job.grade.level] then
 		for k, v in pairs(JobVeh[PlayerData.job.name][currentgarage].vehicle[PlayerData.job.grade.level]) do
 			local plate = JobVeh[PlayerData.job.name][currentgarage].plate .. tostring(math.random(1000, 9999))
 			vehicleMenu[#vehicleMenu + 1] = {
@@ -1416,6 +1436,7 @@ RegisterNetEvent('MojiaGarages:client:openJobVehList', function() --Job Vehicles
 				}
 			}
 		end		
+		end
 		exports['qb-menu']:openMenu(vehicleMenu)
 	end
 end)
